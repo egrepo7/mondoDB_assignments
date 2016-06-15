@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>The Wolfpack</h1>
+  <a href="/wolves/new"><button>New Wolf</button></a>
+
+  <% for(var index in myWolves) { %>
+  <p>
+    Name: <%= myWolves[index].name %>
+  </p>
+  <p>
+    Color: <%= myWolves[index].color %>
+  </p>
+  <p>
+    Owner: <%= myWolves[index].owner %>
+  </p>
+  <a href="/wolves/<%= myWolves[index]._id %>/edit"><button>Edit Wolf</button></a>
+  <a href="/wolves/<%= myWolves[index]._id %>/destroy"><button>Delete Wolf</button></a>
+  <a href="/wolves/<%= myWolves[index]._id %>"><button>View this Wolf</button></a>
+  <hr>
+  <% } %>
+</body>
+</html>

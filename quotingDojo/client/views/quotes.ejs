@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>quotes</title>
+</head>
+<body>
+  <h1>Here are some AWESOME QUOTES!</h1>
+  
+  <% for(var index in quotes) { %>
+    <p>
+      "<%= quotes[index].quote %>"
+    </p>
+    <p>
+      Submitted by: <%= quotes[index].name %> on <%= quotes[index].createdAt %>
+    </p>
+    <hr>
+  <% } %>
+</body>
+</html>

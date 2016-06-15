@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Wolf</title>
+</head>
+<body>
+  <%= wolf %>
+  <%= wolf[0]._id %>
+  <h1>Edit Wolf</h1>
+  <form action="/wolves/<%= wolf[0]._id %>" method="post">
+    <p>Name: <input type="text" name='name'></p>
+    <p>Color: <input type="text" name='color'></p>
+    <p>Owner: <input type="text" name='owner'></p>
+    <button>Submit</button>
+  </form>
+</body>
+</html>

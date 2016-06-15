@@ -1,0 +1,17 @@
+1.
+4. db.students.insert({name:'Jon', home_state: 'Washington', lucky_number: 10, birthday: {month: 3, day: 4, year: 1990}})   TIMES 5
+5. db.students.find().pretty()
+6. db.students.find({home_state: {$eq: "California"}})     db.students.find({home_state: {$eq: "Washington"}})
+7-1. db.students.find({lucky_number: {$gt: 3}})
+7-2. db.students.find({lucky_number: {$lte: 10}}).pretty()
+7-3. db.students.find({lucky_number: {$gte: 1, $lte: 10}}).pretty()
+8. db.students.update({}, {$push: {interests: {$each: ['coding', 'brunch', 'MongoDB']}}}, {multi: true})
+9. db.students.update({_id: ObjectId("575f3a4d23355672c49191d6")}, {$push: {interests: 'guitar'}})
+> db.students.update({_id: ObjectId("575f3afb23355672c49191d7")}, {$push : {interests: 'weed'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("575f3b1423355672c49191d8")}, {$push : {interests: 'cats'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("575f3b3a23355672c49191d9")}, {$push : {interests: 'government'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("575f3c3f23355672c49191db")}, {$push : {interests: 'wildlings'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
